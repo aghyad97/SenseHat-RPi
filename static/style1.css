@@ -1,0 +1,47 @@
+body {
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  div.txt {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+form{
+            border: 10px solid rgb(32, 100, 6);
+            padding: 20px;
+            /*keep it 700px unless you can no longer do so*/
+            max-width: 1200px;
+            /*stays at 700px until 80% is less than*/
+            width: 100%;
+            /*sets margin*/
+            margin: 20px auto;
+            background: rgba(34, 100, 42, 0.7);
+}

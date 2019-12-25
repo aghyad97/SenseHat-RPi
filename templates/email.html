@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = "The current time is: " +
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+        <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/weather">Weather</a></li>
+                <li><a href="/irrigation/ON">Irrigation ON</a></li>
+                <li><a href="/irrigation/OFF">Irrigation OFF</a></li>
+            </ul>
+        <h1 align="center">Email was sent to {{ email }}</h1>
+        <h2 align="center" id="txt">
+    </body>
+</html>
